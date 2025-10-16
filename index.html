@@ -1,7 +1,265 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #0f172a; /* slate-900 */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-slate-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .tag {
+            @apply inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full;
+        }
+        .nav-link {
+             @apply text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800">Jane Doe</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#labs" class="nav-link">Lab Challenges</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 nav-link">Home</a>
+            <a href="#resume" class="block py-2 nav-link">Resume</a>
+            <a href="#projects" class="block py-2 nav-link">Projects</a>
+            <a href="#labs" class="block py-2 nav-link">Lab Challenges</a>
+            <a href="#contact" class="block py-2 nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-[calc(100vh-80px)] flex items-center py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 leading-tight">
+                        Jane Doe
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl text-blue-600 font-semibold">
+                        Cybersecurity Analyst & Certified Ethical Hacker
+                    </p>
+                    <p class="mt-6 text-slate-600 max-w-xl mx-auto md:mx-0">
+                        A dedicated and results-oriented cybersecurity professional with a passion for protecting digital assets and infrastructure. Proven expertise in vulnerability assessment, penetration testing, and incident response. Eager to apply my skills to solve complex security challenges.
+                    </p>
+                    <a href="#projects" class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+                        View My Work
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-200 overflow-hidden shadow-2xl ring-4 ring-blue-500/50">
+                        <img src="https://placehold.co/400x400/E2E8F0/4A5568?text=Your+Photo" alt="Jane Doe's professional headshot" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-24">
+            <h2 class="section-title">My Resume</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+                <!-- Academic Background -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-700 mb-4 border-b-2 border-blue-200 pb-2">Academic Background</h3>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-slate-800">MSc in Cybersecurity</h4>
+                        <p class="text-slate-500">University of Tech | 2021 - 2023</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-slate-800">BSc in Computer Science</h4>
+                        <p class="text-slate-500">State University | 2017 - 2021</p>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-4 border-b-2 border-blue-200 pb-2">Work Experience</h3>
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-slate-800">Cybersecurity Analyst</h4>
+                        <p class="text-slate-500">Secure Solutions Inc. | 2023 - Present</p>
+                        <ul class="list-disc list-inside mt-2 text-slate-600 space-y-1">
+                            <li>Conducted regular vulnerability assessments and penetration tests.</li>
+                            <li>Monitored network traffic for suspicious activity and responded to incidents.</li>
+                            <li>Developed and implemented new security policies and procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-4 border-b-2 border-blue-200 pb-2">Certifications</h3>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Certified Ethical Hacker (CEH)</li>
+                        <li>CompTIA Security+</li>
+                        <li>Cisco Certified CyberOps Associate</li>
+                    </ul>
+                </div>
+
+                <!-- Skills -->
+                <div class="mt-12">
+                     <h3 class="text-2xl font-bold text-slate-700 mb-4 border-b-2 border-blue-200 pb-2">Skills</h3>
+                     <div class="flex flex-wrap gap-2">
+                        <span class="tag">Penetration Testing</span>
+                        <span class="tag">Vulnerability Assessment</span>
+                        <span class="tag">Nmap</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Bash Scripting</span>
+                        <span class="tag">Incident Response</span>
+                        <span class="tag">SIEM</span>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-slate-100 -mx-6 px-6">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Project+1" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Network Traffic Analyzer</h3>
+                        <p class="text-slate-600 mb-4">A Python-based tool that captures and analyzes network packets in real-time to detect common threats like port scanning and ARP spoofing.</p>
+                        <div>
+                            <span class="tag">Python</span>
+                            <span class="tag">Scapy</span>
+                            <span class="tag">Networking</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Project+2" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Secure Web Application</h3>
+                        <p class="text-slate-600 mb-4">Developed a sample e-commerce site with a focus on security, implementing measures against XSS, SQLi, and CSRF attacks.</p>
+                        <div>
+                            <span class="tag">Django</span>
+                            <span class="tag">OWASP Top 10</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Project+3" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Automated Log Analysis</h3>
+                        <p class="text-slate-600 mb-4">A set of scripts to automate the parsing and analysis of server logs to identify potential security incidents and generate daily reports.</p>
+                        <div>
+                            <span class="tag">Bash</span>
+                            <span class="tag">Regex</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lab Challenges Section -->
+        <section id="labs" class="py-24">
+            <h2 class="section-title">Lab Challenges</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Lab Challenge 1 -->
+                <div class="card flex flex-col md:flex-row">
+                    <img src="https://placehold.co/600x600/6366F1/FFFFFF?text=Lab+1" alt="Lab 1 Screenshot" class="w-full md:w-1/3 h-64 md:h-auto object-cover">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">CTF: Basic Pentesting</h3>
+                        <p class="text-slate-600 mb-4"><strong>Problem:</strong> Gain root access to a vulnerable Linux machine by exploiting a web application vulnerability.</p>
+                        <p class="text-slate-600 mb-4"><strong>Approach:</strong> Started with Nmap scan to identify open ports (80, 22). Found a vulnerable web application, used SQL injection to bypass login, uploaded a reverse shell, and escalated privileges using a kernel exploit.</p>
+                        <p class="text-slate-600 mb-4"><strong>Tools Used:</strong> Nmap, Burp Suite, Metasploit, LinEnum.</p>
+                        <p class="text-slate-600"><strong>Lessons Learned:</strong> Reinforced the importance of input sanitization and keeping systems patched. Gained practical experience with privilege escalation techniques.</p>
+                    </div>
+                </div>
+                <!-- Lab Challenge 2 -->
+                <div class="card flex flex-col md:flex-row">
+                    <img src="https://placehold.co/600x600/EC4899/FFFFFF?text=Lab+2" alt="Lab 2 Screenshot" class="w-full md:w-1/3 h-64 md:h-auto object-cover">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Forensics: Stolen Data</h3>
+                        <p class="text-slate-600 mb-4"><strong>Problem:</strong> Analyze a disk image to determine what data was exfiltrated by a disgruntled employee.</p>
+                        <p class="text-slate-600 mb-4"><strong>Approach:</strong> Used Autopsy to analyze the disk image. Examined browser history, deleted files, and registry keys. Discovered a USB drive was used and found fragments of the stolen documents in unallocated space.</p>
+                        <p class="text-slate-600 mb-4"><strong>Tools Used:</strong> Autopsy, FTK Imager.</p>
+                        <p class="text-slate-600"><strong>Lessons Learned:</strong> Deepened my understanding of digital forensics workflows and how data can be recovered even after deletion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact Section / Footer -->
+    <footer id="contact" class="bg-slate-800 text-slate-200 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-slate-400 mb-8 max-w-2xl mx-auto">
+                I'm always open to discussing new opportunities, creative ideas, or interesting projects. Feel free to reach out to me.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:jane.doe@example.com" class="hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    <span>Email</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.337 7.433a1.144 1.144 0 01-1.144 1.144H4.192a1.145 1.145 0 010-2.29h.001a1.144 1.144 0 011.144 1.146zM6.57 16.338H4.192v-8.59h2.378v8.59zM17.639 0H2.361A2.36 2.36 0 000 2.361v15.278A2.36 2.36 0 002.361 20h15.278A2.36 2.36 0 0020 17.639V2.361A2.36 2.36 0 0017.639 0z" clip-rule="evenodd"></path></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0020 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-slate-500">&copy; 2024 Jane Doe. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript for the mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
